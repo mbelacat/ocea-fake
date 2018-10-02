@@ -99,14 +99,100 @@ textarea {
 
 
 
+   /* ======================  START UTILITY CLASSES  =============================== */
+.flex{
+  display:flex;
+}
+.flexSB{
+  display: flex;
+  justify-content: space-between;
+}
+.flexJCC{
+  display: flex;
+  justify-content: center;
+}
+   /* ====================== END UTILITY CLASSES   ============================== */
 
 
 
 
+   /* ======================  START COMMUN RULES  =============================== */
+
+
+
+   /* ======================  END COMMUN RULES  ================================ */
+
+
+   /* ======================  START TOP  ================================ */
+  .top{
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    border-bottom: 0.05em solid #E5E5E5;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+aside.left-to, aside.right_top{
+  width: 50%;
+}
+.left-top{
+  width: 50%;
+  height: 100%;
+}
+.left-top i{
+  margin: auto 1em;
+  color: #A9A9A9
+}
+
+.left-top a {
+  height: 100%;
+  width: 100%;
+}
+ul#menu-top{
+  width: 50%;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+ul#menu-top li{
+  display: inline;
+  margin: 0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+li.facebook, li.envelope{
+  border-right: 0.05em solid #E5E5E5
+}
+form submit{
+  background-color: #FF38A3;
+    margin: 1px;
+    padding: 3px;
+    color: white;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+   /* ======================  END TOP  ================================== */
+
+
+   /* ======================  START HEADER  ==================================== */
+
+
+   /* ======================  END HEADER  ====================================== */
 
 
 
 
+   /* ======================  START MAIN  ================================== */
+
+   /* ======================  END MAIN  ===================================== */
+
+
+
+   /* ======================  START FOOTER  ================================ */
+
+
+   /* ======================  END FOOTER  ================================== */
 
 
 
