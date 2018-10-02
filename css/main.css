@@ -111,13 +111,23 @@ textarea {
   display: flex;
   justify-content: center;
 }
+
+.flexSA{
+  display: flex;
+  justify-content: space-around;
+}
    /* ====================== END UTILITY CLASSES   ============================== */
 
 
 
 
    /* ======================  START COMMUN RULES  =============================== */
-
+section{
+  width: 90%;
+  background-color: pink;
+  margin: 2em auto;
+  padding-bottom: 2em;
+}
 
    /* ======================  END COMMUN RULES  ================================ */
 
@@ -265,17 +275,41 @@ li.sport, li.esthetique, li.uv{
   width: 90%;
   padding: 3em;
 }
-.text-header span{
+.text-header a{
   color:#FF38A3;
+  text-decoration: none;
 }
-  /* ------------------------------- carousel end --------------------------  */
+  /* ------------------------------- carousel end ------------------------------------  */
 
    /* ======================  END HEADER  ====================================== */
 
 
-
-
    /* ======================  START MAIN  ================================== */
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+   /* ------------------------------- section Ocea Sport Start--------------------------  */
+ .ocea-sport{
+    background-color: #ff38a3;
+    color: white;
+ }
+ .fa-ocea-sport{
+   width:20%;
+   background-color: grey;
+   text-align: center;
+ }
+.testez-nous{
+  background-color: lightgrey;
+  text-align: center;
+  margin-top: 3em;
+}
+
+   /* ------------------------------- section Ocea Sport End--------------------------  */
 
    /* ======================  END MAIN  ===================================== */
 
