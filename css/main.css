@@ -111,10 +111,33 @@ textarea {
   display: flex;
   justify-content: center;
 }
-
 .flexSA{
   display: flex;
   justify-content: space-around;
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+.rotate-yes{
+  position: absolute;
+  transform: rotate(-1deg);
+  /* width: 110%; */
+}
+.rotate-no{
+  transform: rotate(1deg);
+  /* width: 90%; */
+}
+.container-relative{
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 1em;
+
+}
+.grey{
+  background-color: grey;
 }
    /* ====================== END UTILITY CLASSES   ============================== */
 
@@ -122,11 +145,9 @@ textarea {
 
 
    /* ======================  START COMMUN RULES  =============================== */
-section{
+section, .hours-address{
   width: 90%;
-  background-color: pink;
-  margin: 2em auto;
-  padding-bottom: 2em;
+  margin: 1em auto;
 }
 
    /* ======================  END COMMUN RULES  ================================ */
@@ -189,7 +210,13 @@ form submit{
 
 
    /* ======================  START HEADER  ==================================== */
-
+ul#category li a{
+  text-decoration: none;
+  color: black;
+}
+ul#category li a:hover{
+  color: #ff38a3;
+}
 ul#category li {
   display: inline;
   padding-left:1em;
@@ -198,15 +225,20 @@ ul#category li {
   font-weight: bold;
 }
 ul#category{
+  padding-top: 4em;
 }
 li.sport, li.esthetique, li.uv{
   border-right: 0.05em solid #E5E5E5
 }
-
+nav{
+  width: 90%;
+  margin: auto;
+};
 /* ------------------------------- carousel start --------------------------  */
-header{
+/* header{
   padding-top: 10vh;
-}
+  height: 163vh;
+}*/
 @keyframes AutoSlide {
 	0% {
 		left: 0vh; /*1ère image*/
@@ -241,7 +273,6 @@ header{
   	position: relative;
   	width: 100vw;
   	height: 100%;
-  	margin:  20px auto;
   	overflow: hidden;
 
   }
@@ -265,22 +296,27 @@ header{
 
 .carousel{
   width: 100%;
-  height: 80vh;
-  background-color: pink;
+  height: 113vh;
   position: relative;
-
+  margin-bottom: 10em;
 }
 
 .text-header{
-  position:absolute;
-  bottom:0.1em;
   background-color: rgb(0, 0, 0, 0.5);
   color: white;
   align-items: center;
+  position:absolute;
+  bottom:15em;
+  transform: rotate(-1deg);
+  position: absolute;
+  left: -50px;
+  top: 15em;
+  width: 110%;
 }
 .text-header p{
-  width: 90%;
+  width: 80%;
   padding: 3em;
+  font-size: 1em;
 }
 .text-header a{
   color:#FF38A3;
@@ -301,16 +337,28 @@ main {
 }
 
    /* ------------------------------- section Ocea Sport Start--------------------------  */
+
 .ocea-sport-container{
-  width: 100%;
-  height: 100%;
-  background-color: #ff38a3;
+  transform: rotate(-1deg);
+  position: absolute;
+  top: 31em;
+  left:-50px;
+  height: 55%;
+
 }
- .ocea-sport{
+.ocea-sport-container, .planning-container, .footer{
+  width: 110%;
+  background-color: #ff38a3;
+  padding-top: 1em;
+}
+.ocea-sport{
     color: white;
  }
- .fa-ocea-sport{
-   width:20%;
+ .ocea-sport{
+   text-align: center;
+ }
+.fa-ocea-sport, .planning article {
+   width:22%;
    text-align: center;
  }
 .testez-nous{
@@ -328,8 +376,8 @@ main {
   color: black;
   font-weight: lighter;
 }
-
   /* ------------------------------- section Ocea Sport End--------------------------  */
+
   /* ------------------------------- section Video Start --------------------------  */
 .video{
   width: 60%;
@@ -345,15 +393,120 @@ iframe{
   width:100%;
   height:100%;
 }
-
   /* ------------------------------- section Video End --------------------------  */
+
+
+  /* ------------------------------- section planning End --------------------------  */
+main.container-relative{
+  width: 100%;
+
+}
+.planning-container{
+  position: absolute;
+    transform: rotate(-1deg);
+    height: 70vh;
+    left: -65px;
+    top: 2em;
+    width: 110%;
+}
+article img{
+  height: 50%;
+  width: 100%;
+}
+ article h3{
+   background-color: #C71776;
+   color: white;
+   margin: 0;
+   padding: 0.5em;
+ }
+ .planning{
+   margin: 6em auto;
+ }
+ .planning article a{
+   text-decoration: none;
+   background-color: #FFFFFF;
+   padding: 0.5em 1em;
+ }
+.planning article a:hover{
+  background-color: #fcdaef;
+}
+/* ------------------------------- section planning End --------------------------  */
+
+
+
+/* ------------------------------- section HOraires Start --------------------------  */
+
+
+section.left, section.right{
+  width: 50%;
+  margin: 0;
+}
+.left a{
+  text-decoration: none;
+  color: #ed1e8c;
+}
+
+.right a{
+  color: #ed1e8c;
+}
+/* ------------------------------- section horaires End --------------------------  */
 
    /* ======================  END MAIN  ===================================== */
 
 
 
    /* ======================  START FOOTER  ================================ */
-
+footer{
+  height: 20em;
+  flex-direction: column;
+  align-items:center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  justify-content: flex-end;
+  margin: auto;
+  background-color: #4C4C4C;
+}
+.footer{
+  background-color: #4C4C4C;
+  left: -20px;
+  top: 150em;
+}
+.info-footer{
+  width: 22%;
+  color: white;
+}
+li{
+  list-style-type: none;
+}
+ul{
+  padding: 0;
+}
+ul#copyright{
+  padding-top: 1em;
+}
+ul#copyright li{
+  display: inline;
+}
+footer ul#copyright{
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  border-top: 0.05em solid white
+}
+ul#copyright a{
+  color: white;
+  text-decoration: none;
+}
+ul#copyright i{
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover, ul#copyright a:hover {
+  text-decoration: underline;
+}
 
    /* ======================  END FOOTER  ================================== */
 
