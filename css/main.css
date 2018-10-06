@@ -1,0 +1,689 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+   /* ======================  START UTILITY CLASSES  =============================== */
+.flex{
+  display:flex;
+}
+.flexSB{
+  display: flex;
+  justify-content: space-between;
+}
+.flexJCC{
+  display: flex;
+  justify-content: center;
+}
+.flexSA{
+  display: flex;
+  justify-content: space-around;
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+.rotate-yes{
+  position: absolute;
+  transform: rotate(-1deg);
+  /* width: 110%; */
+}
+.rotate-no{
+  transform: rotate(1deg);
+  /* width: 90%; */
+}
+.container-relative{
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 1em;
+
+}
+.grey{
+  background-color: grey;
+}
+   /* ====================== END UTILITY CLASSES   ============================== */
+
+
+
+
+   /* ======================  START COMMUN RULES  =============================== */
+section, .hours-address{
+  width: 90%;
+  margin: 1em auto;
+}
+
+   /* ======================  END COMMUN RULES  ================================ */
+
+
+   /* ======================  START TOP  ================================ */
+  .top{
+    width: 90%;
+    height: 7vh;
+    align-items: center;
+    border-bottom: 0.05em solid #E5E5E5;
+    padding-left: 4em;
+    padding-right: 4em;
+    position: fixed;
+    top:0;
+    background-color: white;
+    z-index:10;
+  }
+aside.left-to, aside.right_top{
+  width: 50%;
+}
+.left-top{
+  width: 50%;
+  height: 100%;
+}
+.left-top i{
+  margin: auto 1em;
+  color: #A9A9A9
+}
+
+.left-top a {
+  height: 100%;
+  width: 100%;
+}
+ul#menu-top{
+  width: 50%;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+ul#menu-top li{
+  display: inline;
+  margin: 0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+li.facebook, li.envelope{
+  border-right: 0.05em solid #E5E5E5
+}
+form submit{
+  background-color: #FF38A3;
+    margin: 1px;
+    padding: 3px;
+    color: white;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+   /* ======================  END TOP  ================================== */
+
+
+   /* ======================  START HEADER  ==================================== */
+ul#category li a{
+  text-decoration: none;
+  color: black;
+}
+ul#category li a:hover{
+  color: #ff38a3;
+}
+ul#category li {
+  display: inline;
+  padding-left:1em;
+  padding-right:1em;
+  font-size: 1em;
+  font-weight: bold;
+}
+ul#category{
+  padding-top: 4em;
+}
+li.sport, li.esthetique, li.uv{
+  border-right: 0.05em solid #E5E5E5
+}
+nav{
+  width: 90%;
+  margin: auto;
+};
+/* ------------------------------- carousel start --------------------------  */
+/* header{
+  padding-top: 10vh;
+  height: 163vh;
+}*/
+@keyframes AutoSlide {
+	0% {
+		left: 0vh; /*1ère image*/
+	}
+	15% {
+		left: 0vh; /*idem pour attente*/
+	}
+	30% {
+		left: -100vh; /*2ème image*/
+	}
+	45% {
+		left: -100vh; /*idem pour attente*/
+	}
+	60% {
+		left: -200vh; /*3ème image*/
+	}
+	75% {
+		left: -300vh; /*idem pour attente*/
+	}
+  85%{
+    left: -400vh;
+  }
+  95 {
+    left: -400vh;
+  }
+	100% {
+		left: 0vh; /*1ère image*/
+	}
+}
+
+  #slideshow {
+  	position: relative;
+  	width: 100vw;
+  	height: 100%;
+  	overflow: hidden;
+
+  }
+  #sContent li {
+  	display: inline;
+  }
+  #sContent {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+
+  	/*CSS3 keyframes animation*/
+  	animation-name: AutoSlide;
+  	animation-duration: 30s;
+  	animation-iteration-count: infinite;
+  	animation-timing-function: ease-in-out;
+  }
+
+.carousel{
+  width: 100%;
+  height: 113vh;
+  position: relative;
+  margin-bottom: 10em;
+}
+
+.text-header{
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  align-items: center;
+  position:absolute;
+  bottom:15em;
+  transform: rotate(-1deg);
+  position: absolute;
+  left: -50px;
+  top: 15em;
+  width: 110%;
+}
+.text-header p{
+  width: 80%;
+  padding: 3em;
+  font-size: 1em;
+}
+.text-header a{
+  color:#FF38A3;
+  text-decoration: none;
+}
+  /* ------------------------------- carousel end ------------------------------------  */
+
+   /* ======================  END HEADER  ====================================== */
+
+
+   /* ======================  START MAIN  ================================== */
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+   /* ------------------------------- section Ocea Sport Start--------------------------  */
+
+.ocea-sport-container{
+  transform: rotate(-1deg);
+  position: absolute;
+  top: 31em;
+  left:-50px;
+  height: 55%;
+
+}
+.ocea-sport-container, .planning-container, .footer{
+  width: 110%;
+  background-color: #ff38a3;
+  padding-top: 1em;
+}
+.ocea-sport{
+    color: white;
+ }
+ .ocea-sport{
+   text-align: center;
+ }
+.fa-ocea-sport, .planning article {
+   width:22%;
+   text-align: center;
+ }
+.testez-nous{
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.testez-nous a{
+  background-color: #FFFE45;
+  padding: 0.5em 1.5em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+  /* ------------------------------- section Ocea Sport End--------------------------  */
+
+  /* ------------------------------- section Video Start --------------------------  */
+.video{
+  width: 60%;
+  height: 60%;
+  margin:auto;
+  padding:40% 0 0 0;
+  position:relative;
+}
+iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+  /* ------------------------------- section Video End --------------------------  */
+
+
+  /* ------------------------------- section planning End --------------------------  */
+main.container-relative{
+  width: 100%;
+
+}
+.planning-container{
+  position: absolute;
+    transform: rotate(-1deg);
+    height: 70vh;
+    left: -65px;
+    top: 2em;
+    width: 110%;
+}
+article img{
+  height: 50%;
+  width: 100%;
+}
+ article h3{
+   background-color: #C71776;
+   color: white;
+   margin: 0;
+   padding: 0.5em;
+ }
+ .planning{
+   margin: 6em auto;
+ }
+ .planning article a{
+   text-decoration: none;
+   background-color: #FFFFFF;
+   padding: 0.5em 1em;
+ }
+.planning article a:hover{
+  background-color: #fcdaef;
+}
+/* ------------------------------- section planning End --------------------------  */
+
+
+
+/* ------------------------------- section HOraires Start --------------------------  */
+
+
+section.left, section.right{
+  width: 50%;
+  margin: 0;
+}
+.left a{
+  text-decoration: none;
+  color: #ed1e8c;
+}
+
+.right a{
+  color: #ed1e8c;
+}
+/* ------------------------------- section horaires End --------------------------  */
+
+   /* ======================  END MAIN  ===================================== */
+
+
+
+   /* ======================  START FOOTER  ================================ */
+footer{
+  height: 20em;
+  flex-direction: column;
+  align-items:center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  justify-content: flex-end;
+  margin: auto;
+  background-color: #4C4C4C;
+}
+.footer{
+  background-color: #4C4C4C;
+  left: -20px;
+  top: 150em;
+}
+.info-footer{
+  width: 22%;
+  color: white;
+}
+li{
+  list-style-type: none;
+}
+ul{
+  padding: 0;
+}
+ul#copyright{
+  padding-top: 1em;
+}
+ul#copyright li{
+  display: inline;
+}
+footer ul#copyright{
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  border-top: 0.05em solid white
+}
+ul#copyright a{
+  color: white;
+  text-decoration: none;
+}
+ul#copyright i{
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover, ul#copyright a:hover {
+  text-decoration: underline;
+}
+
+   /* ======================  END FOOTER  ================================== */
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
