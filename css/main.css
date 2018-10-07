@@ -119,55 +119,39 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-.rotate-yes{
-  position: absolute;
-  transform: rotate(-1deg);
-  /* width: 110%; */
+.pinkBC{
+  background-color: #ff38a3;
 }
-.rotate-no{
-  transform: rotate(1deg);
-  /* width: 90%; */
-}
-.container-relative{
-  width: 100%;
-  height: 78vh;
-  position: relative;
-  overflow: hidden;
-  padding-top: 1em;
-
-}
-.grey{
-  background-color: grey;
-}
-   /* ====================== END UTILITY CLASSES   ============================== */
-
-
-
-
    /* ======================  START COMMUN RULES  =============================== */
-section, .hours-address{
+.planning, .hours-address, .contrat p, .contrat h2{
   width: 90%;
   margin: 1em auto;
 }
-
-   /* ======================  END COMMUN RULES  ================================ */
-
-
-   /* ======================  START TOP  ================================ */
-  .top{
-    width: 90%;
-    height: 7vh;
-    align-items: center;
-    border-bottom: 0.05em solid #E5E5E5;
-    padding-left: 4em;
-    padding-right: 4em;
-    position: fixed;
-    top:0;
-    background-color: white;
-    z-index:10;
-  }
-aside.left-to, aside.right_top{
+.ocea-sport, .fa-ocea-sport, .planning article, .testez-nous, footer ul#copyright{
+  text-align: center;
+}
+.top, main, footer ul#copyright {
+  align-items: center;
+}
+.ocea-sport-container, .planning-container, .footer{
+  padding: 2em 0;
+}
+.left, .right, aside.left-top, aside.right-top {
   width: 50%;
+}
+   /* ======================  START TOP  ================================ */
+.top{
+  width: 90%;
+  height: 7vh;
+  border-bottom: 0.05em solid #E5E5E5;
+  padding: 0 4em;
+  position: fixed;
+  top:0;
+  background-color: white;
+  z-index:10;
+}
+.right-top{
+  text-align: right;
 }
 .left-top{
   width: 50%;
@@ -193,12 +177,10 @@ ul#menu-top li{
   padding-top: 1em;
   padding-bottom: 1em;
 }
-
 li.facebook, li.envelope{
   border-right: 0.05em solid #E5E5E5
 }
 form submit{
-  background-color: #FF38A3;
     margin: 1px;
     padding: 3px;
     color: white;
@@ -206,8 +188,6 @@ form submit{
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
-   /* ======================  END TOP  ================================== */
-
 
    /* ======================  START HEADER  ==================================== */
 ul#category li a{
@@ -233,140 +213,55 @@ li.sport, li.esthetique, li.uv{
 nav{
   width: 90%;
   margin: auto;
-};
-/* ------------------------------- carousel start --------------------------  */
-/* header{
-  padding-top: 10vh;
-  height: 163vh;
-}*/
-@keyframes AutoSlide {
-	0% {
-		left: 0vh; /*1ère image*/
-	}
-	15% {
-		left: 0vh; /*idem pour attente*/
-	}
-	30% {
-		left: -100vh; /*2ème image*/
-	}
-	45% {
-		left: -100vh; /*idem pour attente*/
-	}
-	60% {
-		left: -200vh; /*3ème image*/
-	}
-	75% {
-		left: -300vh; /*idem pour attente*/
-	}
-  85%{
-    left: -400vh;
-  }
-  95 {
-    left: -400vh;
-  }
-	100% {
-		left: 0vh; /*1ère image*/
-	}
 }
-
-  #slideshow {
-  	position: relative;
-  	width: 100vw;
-  	height: 100%;
-  	overflow: hidden;
-
-  }
-  #sContent li {
-  	display: inline;
-  }
-  #sContent {
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	margin: 0;
-  	padding: 0;
-
-  	/*CSS3 keyframes animation*/
-  	animation-name: AutoSlide;
-  	animation-duration: 30s;
-  	animation-iteration-count: infinite;
-  	animation-timing-function: ease-in-out;
-  }
-
-.carousel{
-  width: 100%;
-  height: 113vh;
+/* ------------------------------- images start --------------------------  */
+.image-header{
+  height: 100vh;
+  padding-bottom:6em;
   position: relative;
-  margin-bottom: 10em;
 }
-
 .text-header{
   background-color: rgb(0, 0, 0, 0.5);
   color: white;
-  align-items: center;
-  position:absolute;
-  bottom:15em;
-  transform: rotate(-1deg);
   position: absolute;
-  left: -50px;
-  top: 15em;
-  width: 110%;
+  bottom: 22em;
 }
 .text-header p{
-  width: 80%;
-  padding: 3em;
+  width: 85%;
+  padding: 2em 0;
   font-size: 1em;
 }
 .text-header a{
   color:#FF38A3;
   text-decoration: none;
 }
-  /* ------------------------------- carousel end ------------------------------------  */
 
    /* ======================  END HEADER  ====================================== */
 
 
    /* ======================  START MAIN  ================================== */
 main {
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-top: 2em;
 }
-
-   /* ------------------------------- section Ocea Sport Start--------------------------  */
+   /* ------------------------------- section Ocea Sport--------------------------  */
 
 .ocea-sport-container{
-  transform: rotate(-1deg);
   position: absolute;
-  top: 31em;
-  left:-50px;
-  height: 55%;
+  bottom: -2em;
+  width: 100%;
+}
 
-}
-.ocea-sport-container, .planning-container, .footer{
-  width: 110%;
-  background-color: #ff38a3;
-  padding-top: 1em;
-}
 .ocea-sport{
     color: white;
  }
- .ocea-sport{
-   text-align: center;
- }
+
 .fa-ocea-sport, .planning article {
    width:22%;
-   text-align: center;
  }
 .testez-nous{
-  text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 0;
 }
 .testez-nous a{
   background-color: #FFFE45;
@@ -376,9 +271,8 @@ main {
   color: black;
   font-weight: lighter;
 }
-  /* ------------------------------- section Ocea Sport End--------------------------  */
 
-  /* ------------------------------- section Video Start --------------------------  */
+  /* ------------------------------- section Video  --------------------------  */
 .video{
   width: 60%;
   height: 60%;
@@ -393,86 +287,62 @@ iframe{
   width:100%;
   height:100%;
 }
-  /* ------------------------------- section Video End --------------------------  */
 
 
-  /* ------------------------------- section planning End --------------------------  */
-main.container-relative{
-  width: 100%;
-
+  /* ------------------------------- section planning  --------------------------  */
+main#planning{
+  width: 70vh;
 }
 .planning-container{
-  position: absolute;
-    transform: rotate(-1deg);
-    height: 70vh;
-    left: -65px;
-    top: 2em;
-    width: 110%;
+  padding: 2em 0;
 }
 article img{
   height: 50%;
   width: 100%;
 }
- article h3{
-   background-color: #C71776;
-   color: white;
-   margin: 0;
-   padding: 0.5em;
+article h3{
+  background-color: #C71776;
+  color: white;
+  margin: 0;
+  padding: 0.5em;
  }
- .planning{
-   margin: 6em auto;
- }
- .planning article a{
-   text-decoration: none;
-   background-color: #FFFFFF;
-   padding: 0.5em 1em;
+.planning article a{
+  text-decoration: none;
+  background-color: #FFFFFF;
+  padding: 0.5em 1em;
  }
 .planning article a:hover{
   background-color: #fcdaef;
 }
-/* ------------------------------- section planning End --------------------------  */
 
 
 
-/* ------------------------------- section HOraires Start --------------------------  */
+/* ------------------------------- section HOraires  --------------------------  */
 
-
-section.left, section.right{
-  width: 50%;
-  margin: 0;
-}
 .left a{
   text-decoration: none;
   color: #ed1e8c;
 }
-
 .right a{
   color: #ed1e8c;
 }
-/* ------------------------------- section horaires End --------------------------  */
 
-   /* ======================  END MAIN  ===================================== */
+/* =================================  FOOTER  ====================================  */
 
-
-
-   /* ======================  START FOOTER  ================================ */
 footer{
-  height: 20em;
+
   flex-direction: column;
   align-items:center;
   padding-top: 1em;
   padding-bottom: 1em;
   justify-content: flex-end;
-  margin: auto;
   background-color: #4C4C4C;
 }
 .footer{
-  background-color: #4C4C4C;
-  left: -20px;
-  top: 150em;
+  width: 90%;
 }
 .info-footer{
-  width: 22%;
+  width: 24%;
   color: white;
 }
 li{
@@ -489,8 +359,6 @@ ul#copyright li{
 }
 footer ul#copyright{
   width: 90%;
-  text-align: center;
-  align-items: center;
   border-top: 0.05em solid white
 }
 ul#copyright a{
@@ -507,13 +375,6 @@ ul#copyright i{
 .footer a:hover, ul#copyright a:hover {
   text-decoration: underline;
 }
-
-   /* ======================  END FOOTER  ================================== */
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
